@@ -2,6 +2,6 @@
 
 ## Web Development I
 
-** Project 1
+**Project 1**
 
 
