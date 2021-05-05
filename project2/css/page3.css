@@ -1,0 +1,31 @@
+video{
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+display: block;
+margin-top: 3%;
+    
+}
+
+footer{
+margin-top: 20px;
+}
+
+h2{
+     text-align: center;
+     color:rgb(0, 60, 179);
+    margin-top: 3%;
+}
+
+p{
+text-align: center;
+}
+
+audio {
+  display: block;
+  margin: 0 auto;
+ 
+  margin-top: 4%;
+    
+}
+

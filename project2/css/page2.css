@@ -1,0 +1,47 @@
+
+body{
+		margin: 50px;
+	}
+	
+h1{
+        margin-top: 100px;
+	}
+	
+.cycle-slideshow{
+    max-width: 30%;
+    background-color:rgb(0, 60, 179) ;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#adv-custom-caption{
+    text-align: center;
+    color: white;
+}
+
+h2{
+     text-align: center;
+     color:rgb(0, 60, 179); 
+    margin-top: 30px;   
+}
+
+footer{
+    margin-top: 10px;
+}
+
+p{
+text-align: center;
+}
+
+#image1{
+background-image: url("../images/plimoth plantation sunny.jpg");
+width:361px;
+height:240px; 
+margin-left: auto;
+margin-right: auto;
+margin-top: 3%;
+}
+
+#image1:hover{
+background-image: url("../images/plimoth winter.jpg");
+}

@@ -1,0 +1,65 @@
+
+footer{
+clear: both;
+text-align: center;  
+background:rgb(0, 60, 179);
+color: white;
+}
+
+header { 
+padding: 25px;
+font-size: 25px; 
+background: rgb(0, 60, 179);
+}
+
+header img {
+float: left;
+margin: -10% 0% 0% 45%; 
+}
+
+header h1{
+font-size: 25px;
+text-align: center;
+ background: rgb(0, 60, 179);   
+}
+
+h1{
+color: white;
+margin: 8% 0% -1% 3%; 
+
+}
+
+/* Nav bar no underline*/
+a:link{
+text-decoration: none;  
+color: white;
+}
+
+
+/* Current page changes background color */
+#current{
+background-color: rgb(242, 229, 217);
+}
+
+
+nav ul li {
+font-size: 16px;
+color: white;
+display: inline-block;
+}
+
+nav {
+text-align: center;
+padding-top: 10px;
+}
+
+nav a{
+color:rgb(0, 60, 179) ;
+padding-left: 10px;
+font-weight: bold;
+}
+
+/* Nav bar hover color */
+nav a:hover{
+color:#ff0066;
+}
