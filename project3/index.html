@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>       
+  <title>Baseball Caps Order</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/normalize.css">
+ <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="scripts/main.js"></script>
+</head>  
+<body>
+  <header>
+   <h1>Baseball Caps</h1>   
+  </header>
+    <nav>    
+      </nav>
+  <main> 
+<form id="baseball_form" name="baseball_form" action="page/confirm.html" method="get">
+    <img src="images/reds.jpg" name="cap" id="cap">
+   <h2> Select your shipping team: </h2> 
+    <input type="radio" id="team1" name="team" value="cincinnati" checked>
+    <label for="team1">Cincinnati Reds</label>
+    <br>
+    
+     <input type="radio" name="team" id="team2" value="cleveland">
+    <label for="team2">Cleveland Indians</label>
+    <br>
+    
+     <input type="radio" name="team" id="team3" value="detroit">
+    <label for="team3">Detriot Tigers</label>
+    <br><br>
+    
+    <h2>Provide your shipping information:</h2>
+    <label for="name">Name </label>
+    <input type="text" name="name" id="name">
+    <span></span><br>
+    <label for="phone">Phone </label>
+    <input type="text" name="phone" id="phone">
+    <span></span><br>
+    <label for="email">Email </label>
+    <input type="text" name="email" id="email">
+    <span></span><br>
+    <textarea name="comments" id="textbox" placeholder="Enter special instructions here" rows="4" columns="50" maxlength="350"></textarea>
+    <br><br>
+    
+    <h2>Sign up for our mailing lists!</h2>
+    <input type="checkbox" name="promotions" id="option1" value="promotions">
+    <label for="option1">Promotions</label><br>
+    <input type="checkbox" name="products" id="option2" value="products">
+    <label for="option2">New Products</label><br>
+    <input type="checkbox" name="catelog" id="option3" value="catelog">
+    <label for="option3">Catelog (quartely)</label><br>
+    
+    <input type="button" id="confirm" value="Submit Order">
+    <input type="button" id="reset" value="Clear Form">
+
+    </form>
+  </main>
+   <aside>
+       
+    </aside> 
+  <footer>
+      Kaitlyn Newsad - Project 3 - Spring 2021
+  </footer>  
+    </body>
+  </html>

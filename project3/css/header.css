@@ -1,0 +1,17 @@
+h1{
+background-color: rgb(204, 0, 0);
+color: white;
+text-align: center;
+}
+
+header{
+background-color: rgb(204, 0, 0);
+padding: 10px;
+}
+
+footer{
+background-color: rgb(204, 0, 0);
+color: white;
+text-align: center;
+clear: both;
+}

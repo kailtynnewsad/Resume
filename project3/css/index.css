@@ -1,0 +1,90 @@
+h2{
+background-color: rgb(0, 38, 153);
+color:white;
+font-size: 20px;
+}
+
+h2:nth-of-type(3){
+margin-left: 200px;
+margin-right: 160px;
+}
+
+h2:nth-of-type(2){
+margin-left: 200px;
+margin-right: 150px;
+}
+
+h2:nth-of-type(1){
+margin-left: 200px;
+margin-right: 400px;
+}
+
+label {
+	margin-right: 0px;
+    text-align: right;
+    
+}
+
+label[for=name]{
+padding-left: 200px;
+text-align: center;   
+}
+
+label[for=phone]{
+padding-left: 200px;
+text-align: center;   
+}
+
+label[for=email]{
+padding-left: 200px;
+text-align: center;
+}
+
+input[type=radio] {
+	margin-left: 200px;
+    margin-bottom: 10px;
+    
+}
+
+input[type=checkbox] {
+	margin-left: 200px;
+    margin-bottom: 10px;
+    
+}
+
+input[type=text] {
+	margin-bottom: 15px;
+}
+
+input[type=button] {
+	color:rgb(0, 38, 153) ;
+    margin-right: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+input[type=button]:nth-last-child(2) {
+	margin-left: 200px;   
+}
+
+
+body {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+textarea {
+margin-left: 200px;
+width:400px
+}
+
+img{
+    float:right;
+    margin-right: 400px;
+    margin-top: -15px;
+}
+
+span {
+	color: red;
+}
