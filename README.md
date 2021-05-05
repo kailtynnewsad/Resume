@@ -1,6 +1,6 @@
 # Resume
 
-# Web Development I
+## Web Development I
 
 **Project 1
 
