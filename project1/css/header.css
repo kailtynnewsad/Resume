@@ -1,0 +1,56 @@
+
+header {
+background-color: rgb(0, 179, 179);  
+text-align: center;
+padding: 25px;
+font-size: 25px;   
+}
+
+header img {
+float: left;
+margin: -7% 0% 2% 24%;     
+}
+
+ul{
+list-style-type: none;   
+}
+
+nav ul li{
+display: inline-block;
+padding-right: 165px;
+padding-left:180px;
+font-size: 20px;    
+}
+
+/* Nav bar no underline*/
+a:link{
+text-decoration: none;
+}
+
+/* Nav bar hover color */
+nav a:hover{
+color:#ff0066;
+}
+
+/* Nav bar text color */
+nav a{
+color: #ffffff;
+}
+
+nav{
+background-color: rgb(0, 102, 102);  
+}
+
+
+footer{
+background-color: rgb(0, 179, 179);
+clear: both;
+text-align: center;    
+}
+
+/* Current page changes background color */
+#current{
+background-color: rgb(0, 51, 51);
+}
+
+

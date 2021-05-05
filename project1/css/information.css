@@ -1,0 +1,22 @@
+/* Subtopics and more information heading */
+main h1{
+text-align: center;
+color: rgb(0, 179, 179);  
+}
+
+/* More Information list spacing */
+main li{
+margin: 10px 0;
+}
+
+ul{
+list-style-type: none;   
+}
+
+
+
+
+
+
+
+
