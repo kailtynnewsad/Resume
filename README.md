@@ -18,3 +18,10 @@ The purpose for this project was to create a "scrapbook" site of a place you vis
 The purpose for this project was to create a web site where the user can order a baseball hat and have a choose of three different teams. We had to follow the professors layout for the project. The index.html includes radio buttons that change the image hat when a different team is selected. Text boxes where the user included name, email, phone, and any special instructions. If the user does not fill in the name, email, or phone information than error message will be displyed. Also, if the user enters their phone number not in the right format it will also give an error message. This page also includes radio buttons that all or none could be seleted for the mailing list. At the bottom of the page their is an submit order and a clear form buttons. The submit order button will only work if the name, phone, and email are filled in right. If the information is filled in right then anothere page will display showing the date and time the order was submitted. The clear form button will set everything to the deafult (forms will clear and radio button for team hats will be set to Cincinnati). Also, all labels for radio buttons are clickable.  
 
 
+##Database and Modeling 
+
+**Final Project**:
+
+The purpose of this project was to create a database for a made up company. The project had to include a data dictionary, relational schema, and tables created by the SQL Data Modeler. I had to code in SQL to create tables, insert tables, and write queries. The projects folder includes SQL code, a PowerPoint Presentation about of the project, and a PDF that includes scheme/other content.
+
+
