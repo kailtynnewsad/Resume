@@ -1,0 +1,224 @@
+--Part 3 DDL:
+-- 10/26/21-10/28/21
+
+-- Drop tables 
+DROP TABLE customer CASCADE CONSTRAINTS;
+DROP TABLE tree CASCADE CONSTRAINTS;
+DROP TABLE employee CASCADE CONSTRAINTS;
+DROP TABLE inventory CASCADE CONSTRAINTS;
+DROP TABLE checkout CASCADE CONSTRAINTS;
+
+
+--Create customer table
+-- Set cid as the primary key
+CREATE TABLE customer(
+cid NUMBER(5) CONSTRAINT customer_cid_pk PRIMARY KEY,
+clast VARCHAR2(15),
+cfirst VARCHAR2(15),
+cphone NUMBER(10),
+cemail VARCHAR2(30),
+cAddress VARCHAR2(25),
+cCity VARCHAR2(20),
+cState VARCHAR2(20),
+CZip NUMBER(5)
+);
+
+
+-- Create tree table 
+-- Set tid as the primary key
+CREATE TABLE tree(
+tid NUMBER(3) CONSTRAINT tree_tid_pk PRIMARY KEY,
+ttype VARCHAR2(25),
+tCost NUMBER(4),
+theight NUMBER(1),
+tcity VARCHAR2(15),
+tstate VARCHAR2(15)
+);
+
+
+--Create employee table 
+-- Set eid as the primary key
+CREATE TABLE employee(
+eid NUMBER(3) CONSTRAINT employee_eid_pk PRIMARY KEY,
+elast VARCHAR2(15),
+efirst VARCHAR2(15),
+ehired DATE,
+ejob VARCHAR2(15),
+esalary NUMBER(5),
+ephone NUMBER(10),
+eaddress VARCHAR2(20),
+ecity VARCHAR2(15),
+estate VARCHAR2(15),
+ezip NUMBER(5)
+);
+
+
+--Create inventory table 
+-- Set inventoryID as primary key 
+-- Set tid as foriegn key 
+CREATE TABLE inventory(
+inventoryID NUMBER(2) CONSTRAINT inventory_inventoryID_pk PRIMARY KEY,
+inventoryQuanity NUMBER(2),
+inventoryPrice NUMBER (4),
+tid NUMBER(3) CONSTRAINT inventory_tid_fk REFERENCES tree(tid)
+);
+
+
+--Create checkout table 
+-- Set chid as primary key 
+-- chCreditCash set as check condition
+-- Set tid, eid, and cid as foriegn keys 
+CREATE TABLE checkout(
+chid NUMBER (3) CONSTRAINT checkout_chid_pk PRIMARY KEY,
+chpaid NUMBER(4),
+chCreditCash CHAR(1) CONSTRAINT checkout_chCreditCash_cc CHECK (chCreditCash IN ('Y', 'N')),
+chdate DATE,
+tid NUMBER(3),
+cid NUMBER(5),
+eid NUMBER(3),
+CONSTRAINT checkout_tid FOREIGN KEY (tid) REFERENCES tree(tid),
+CONSTRAINT checkout_cid FOREIGN KEY (cid) REFERENCES customer(cid),
+CONSTRAINT checkout_eid FOREIGN KEY (eid) REFERENCES employee(eid)
+);
+
+
+
+-- Part IV. DML
+-- 11/1/21-11/2/21
+
+
+--Customer Table 
+-- Insert 5 records 
+INSERT INTO customer VALUES
+(12345, 'Smith', 'John', '9375463345', 'smith1@gmail.com', '345 Creek Dr.', 'Clayton', 'Ohio', 45375);
+
+INSERT INTO customer VALUES
+(56789, 'Wood', 'Debra', '9378369265', 'wood@gmail.com', '212 Mill Rd.', 'Clayton', 'Ohio', 45375);
+
+INSERT INTO customer VALUES
+(11445, 'Miller', 'Kayla', '9373345678', 'miller@gmail.com', '880 Spring Dr.', 'Clayton', 'Ohio', 45375);
+
+INSERT INTO customer VALUES
+(22001, 'Meyer', 'Jane', '9371235678', 'jmeyer@gmail.com', '102 Forest Place ', 'Englewood', 'Ohio', 45375);
+
+INSERT INTO customer VALUES
+(12343, 'Brown', 'Jim', '9375421234', 'brown@gmail.com', '705 Miller Rd.', 'Xenia', 'Ohio', 45385);
+
+
+-- Tree Table
+--Insert 5 records
+(234, 'White Pine', 20, 6, 'Athens', 'Ohio');
+
+INSERT INTO tree VALUES
+(555, 'Blue Spruce', 25, 4, 'Athens', 'Ohio');
+
+INSERT INTO tree VALUES
+(123, 'Norway Spruce', 60, 8, 'Athens', 'Ohio');
+
+INSERT INTO tree VALUES
+(333, 'Scotch Pine', 35, 8, 'Athens', 'Ohio');
+
+INSERT INTO tree VALUES
+(771, 'White Pine', 35, 7, 'Athens', 'Ohio');
+
+
+-- Employee Table
+-- Insert 5 records 
+INSERT INTO employee VALUES 
+INSERT INTO employee VALUES 
+(123, 'Newsad', 'Paul', TO_DATE('09/24/1974', 'MM/DD/YYYY'), 'Owner', '74000', 9371234567, '213 Denwood Tr.', 'Clayton', 'Ohio', 45375);
+
+INSERT INTO employee VALUES 
+(124, 'Newsad', 'Andy', TO_DATE('09/24/1974', 'MM/DD/YYYY'), 'Owner', '74000', 9378367890, '545 Union Rd.', 'Clayton', 'Ohio', 45375);
+
+INSERT INTO employee VALUES 
+(400, 'Akins', 'Sam', TO_DATE('11/24/1999', 'MM/DD/YYYY'), 'Sales', '40000', 9371232233, '110 Hope Tr.', 'Englewood', 'Ohio', 45375);
+
+INSERT INTO employee VALUES 
+(401, 'Newsad', 'John', TO_DATE('10/08/2000', 'MM/DD/YYYY'), 'Sales', '44000', 9377890011, '345 North St.', 'Clayton', 'Ohio', 45375);
+
+INSERT INTO employee VALUES 
+(567, 'Smith', 'Lacy', TO_DATE('11/20/2004', 'MM/DD/YYYY'), 'Sales', '35000', 9371236667, '200 Den Rd.', 'Englewood', 'Ohio', 45375);
+
+
+-- Inventory Table
+-- Insert 5 records 
+INSERT INTO inventory VALUES
+(10, 90, 1800, 234);
+
+INSERT INTO inventory VALUES
+(11, 75, 2625, 333);
+
+
+INSERT INTO inventory VALUES
+(12, 45, 2700, 123);
+
+
+INSERT INTO inventory VALUES
+(13, 45, 1575, 771);
+
+INSERT INTO inventory VALUES
+(14, 89, 2225, 555);
+
+
+-- Checkout Table
+-- Insert 5 records
+INSERT INTO checkout VALUES
+(200, 35.00, 'Y', TO_DATE('12/12/2020', 'MM/DD/YYYY'), 771, 12345, 123);
+
+INSERT INTO checkout VALUES
+(201, 20.00, 'N', TO_DATE('12/15/2020', 'MM/DD/YYYY'), 234, 12345, 123);
+
+INSERT INTO checkout VALUES
+(202, 60.00, 'N', TO_DATE('12/17/2020', 'MM/DD/YYYY'), 123, 22001, 401);
+
+INSERT INTO checkout VALUES
+(203, 35.00, 'Y', TO_DATE('12/19/2020', 'MM/DD/YYYY'), 771, 11445, 567);
+
+INSERT INTO checkout VALUES
+(204, 50.00, 'Y', TO_DATE('12/21/2020', 'MM/DD/YYYY'), 123, 56789, 123);
+
+
+-- Part V 
+-- November 9, 2021
+
+-- Write a query to demonstarte 3 tables inner join with a restrction
+-- A query that outputs how much was paid, the date purchased, the type of tree, and how manu were in the inventory.
+-- Inner join the checkout, inventory, and tree.
+-- Output the trees purchased that were White Pine.
+SELECT chdate AS "Date", ttype AS "Tree Type" , chpaid AS "Paid", inventoryQuanity AS "Inventory Quanity"
+FROM checkout, inventory, tree
+WHERE tree.tid = checkout.tid
+AND tree.tid = inventory.tid
+AND ttype ='White Pine';
+
+
+
+-- Write a query using a group or statistical function and singe row function that requires 2 tables
+-- A query that outputs the count of tree types, the type of trees, average cost of each tree, and average inventory value 
+-- Group and order by tree type
+SELECT COUNT(tree.tid),tree.ttype AS "Tree Type", AVG(tree.tcost) AS "Average Tree Cost", AVG(inventory.inventoryPrice) AS "Average Inventory Price"
+FROM tree, inventory
+WHERE tree.tid = inventory.tid
+GROUP BY ttype
+ORDER BY ttype;
+
+
+
+-- Write a query to create a materialized view
+-- Figure our the inventory of types of trees in the inventory 7 days from system date.
+CREATE MATERIALIZED VIEW tree_inventory
+REFRESH COMPLETE 
+START WITH SYSDATE NEXT SYSDATE+7 
+AS SELECT tid, tType, tCost, inventoryQuanity, inventoryPrice
+FROM tree JOIN inventory USING (tid);
+
+DROP MATERIALIZED VIEW tree_inventory;
+
+
+
+
+
+
+
+
