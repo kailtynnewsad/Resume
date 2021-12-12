@@ -22,6 +22,6 @@ The purpose for this project was to create a web site where the user can order a
 
 **Final Project**:
 
-The purpose of this project was to create a database for a made up company. The project had to include a data dictionary, relational schema, and tables created by the SQL Data Modeler. I had to code in SQL to create tables, insert tables, and write queries. The projects folder includes SQL code, a PowerPoint Presentation about of the project, and a PDF that includes scheme/other content.
+The purpose of this project was to create a database for a made up company. The project had to include a data dictionary, relational schema, and tables created by the SQL Data Modeler. I had to code in SQL to create tables, insert tables, and write queries. The projects folder includes SQL code, a PowerPoint Presentation about the project, and a PDF that includes scheme/other content.
 
 
