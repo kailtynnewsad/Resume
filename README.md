@@ -19,6 +19,10 @@ The purpose for this project was to create a "scrapbook" site of a place you vis
 
 The purpose for this project was to create a web site where the user can order a baseball hat and have a choose of three different teams. We had to follow the professors layout for the project. The index.html includes radio buttons that change the image hat when a different team is selected. Text boxes where the user included name, email, phone, and any special instructions. If the user does not fill in the name, email, or phone information than error message will be displyed. Also, if the user enters their phone number not in the right format it will also give an error message. This page also includes radio buttons that all or none could be seleted for the mailing list. At the bottom of the page their is an submit order and a clear form buttons. The submit order button will only work if the name, phone, and email are filled in right. If the information is filled in right then anothere page will display showing the date and time the order was submitted. The clear form button will set everything to the deafult (forms will clear and radio button for team hats will be set to Cincinnati). Also, all labels for radio buttons are clickable.  
 
+Live Demo: https://app.netlify.com/sites/calm-semolina-3fb828/overview
+
 <img width="536" alt="Screen Shot 2022-05-11 at 10 20 42 AM" src="https://user-images.githubusercontent.com/56359938/167873814-6cbf4f08-cd0b-4c2d-a4ed-f505b307ca24.png">
+
+
 
 
